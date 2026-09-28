@@ -7,79 +7,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">Criativa Web</a>
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <a href="#" class="cabecalho__logo">Criativa Web</a>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul class="cabecalho__lista">
+                <li><a href="#home" class="cabecalho__link">Home</a></li>
+                <li><a href="#sobre" class="cabecalho__link">Sobre Nós</a></li>
+                <li><a href="#servicos" class="cabecalho__link">Serviços</a></li>
+                <li><a href="#depoimentos" class="cabecalho__link">Depoimentos</a></li>
+                <li><a href="#contato" class="cabecalho__link">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <div>
-                <p>Transformamos ideias em experiencias digitais.</p>
-                <h1>
+        <section id="home" class="hero">
+            <div class="hero__conteudo">
+                <p class="hero__subtitulo">Transformamos ideias em experiencias digitais.</p>
+                <h1 class="hero__titulo">
                     Criatividade que transforma
-                    <span>o digital.</span>
+                    <span class="hero__destaque">o digital.</span>
                 </h1>
 
-                <p>
+                <p class="hero__descricao">
                     Criamos soluções digitais modernas,
                     funcionais e pensadas para conectar
                     marcas e pessoas.
                 </p>
             </div>
         </section>
-        <section id="sobre">
-            <div>
-                <p>Sobre Nós</p>
-                <h2>
+        <section id="sobre" class="sobre">
+            <div class="sobre__conteudo">
+                <p class="sobre__subtitulo">Sobre Nós</p>
+                <h2 class="sobre__titulo">
                     Criatividade, estratégia 
                     e tecnologia.
                 </h2>
-                <p>
+                <p class="sobre__texto">
                     Somos uma agência de design digital focada em 
                     criar experiências modernas e soluções que
                     ajudam marcas a se destacarem no mundo digital.
                 </p>
-                <p>
+                <p class="sobre__texto">
                     Unimos design, desenvolvimento e estratégia
                     para transformar ideias em projetos funcionais,
                     bonitos e acessíveis.
                 </p>
                 <img
-                src="img/img-800px.png" 
-                alt="Equipe trabalhando em um projeto digital"
-                width="800"
+                    class="sobre__imagem"
+                    src="img/img-800px.png" 
+                    alt="Equipe trabalhando em um projeto digital"
+                    width="800"
                 >
             </div>
-            <div>
+            <div class="sobre__destaques">
                 <h3>Por que escolher a Criativa Web?</h3>
-                <ul>
-                    <li>Design moderno e personalidade</li>
-                    <li>Sites responsivos</li>
-                    <li>Experiência focada no usuário</li>
-                    <li>Soluções digitais criativas</li>
+                <ul class="sobre__lista">
+                    <li class="sobre__item">Design moderno e personalidade</li>
+                    <li class="sobre__item">Sites responsivos</li>
+                    <li class="sobre__item">Experiência focada no usuário</li>
+                    <li class="sobre__item">Soluções digitais criativas</li>
                 </ul>
             </div>
             
         </section>
-        <section id="servicos">
-            <div>
-                <p>Nossos serviços</p>
-                <h2>
+        <section id="servicos" class="servicos">
+            <div class="servicos__cabecalho">
+                <p class="servicos__subtitulo">Nossos serviços</p>
+                <h2 class="servicos__titulo">
                     Soluções para transformar 
                     sua presença digital.
                 </h2>
             </div>
             <div class="servicos-grid">
-                <article class="card-servicos">
+                <article class="servicos__card">
                     <h3>Web design</h3>
                     <p>
                         Criamos layouts modernos, bonitos e 
@@ -87,7 +88,7 @@
                     </p>
                 </article>
 
-                <article class="card-servicos">
+                <article class="servicos__card">
                     <h3>Desenvolvimento Web</h3>
                     <p>
                         Desenvolvemos sites rápidos, funcionais
@@ -95,7 +96,7 @@
                     </p>
                 </article>
 
-                <article class="card-servicos">
+                <article class="servicos__card">
                     <h3>Design Responsivo</h3>
                     <p>
                         Seu site funcionando corretamente em 
@@ -103,7 +104,7 @@
                     </p>
                 </article>
 
-                <article class="card-servicos">
+                <article class="servicos__card">
                     <h3>Identidade Visual</h3>
                     <p>
                         Criamos elementos visuais que ajudam
@@ -111,7 +112,7 @@
                     </p>
                 </article>
 
-                <article class="card-servicos">
+                <article class="servicos__card">
                     <h3>SEO</h3>
                     <p>
                         Otimizamos seu site para meljorar sua
@@ -119,7 +120,7 @@
                     </p>
                 </article>
 
-                <article>
+                <article class="servicos__card">
                     <h3>Consultoria Digital</h3>
                     <p>
                         Estratégias e orientações para melhorar
@@ -128,15 +129,15 @@
                 </article>
             </div>
         </section>
-        <section id="depoimentos">
-            <div>
-                <p>Depoimentos</p>
-                <h2>
+        <section id="depoimentos" class="depoimentos">
+            <div class="depoimentos__cabecalho">
+                <p class="depoimentos__subtitulo">Depoimentos</p>
+                <h2 class="depoimentos__titulo">
                     O que nossos clientes dizem
                 </h2>
             </div>
-            <div class="depoimentos-grid">
-                <article class="card-depoimento">
+            <div class="depoimentos__grid">
+                <article class="depoimentos__card">
                     <p>
                         "A equipe entendeu extamente o que
                         precisávamos e transformou nossa ideias
@@ -146,7 +147,7 @@
                     <span>Empreendedora</span>
                 </article>
 
-                <article class="card-depoimento">
+                <article class="depoimentos__card">
                     <p>
                         "O resultado ficou moderno, rápido e 
                         muito fácil de usar. Superou nossas 
@@ -156,7 +157,7 @@
                     <span>CEO da Tech Solutions</span>
                 </article>
 
-                <article class="card-depoimento">
+                <article class="depoimentos__card">
                     <p>
                         "Desde o primeiro contato tivemos um
                         atendimento excelente. O projeto ficou
@@ -168,36 +169,36 @@
             </div>
 
         </section>
-        <section id="contato">
-            <div>
-                <p>Entre em contato</p>
-                <h2>
+        <section id="contato" class="contato">
+            <div class="contato__conteudo">
+                <p class="contato__subtitulo">Entre em contato</p>
+                <h2 class="conteudo__titulo">
                     Vamos trabsformar sua ideia em realidade?
                 </h2>
-                <p>
+                <p class="contato__descricao">
                     Conte um pouco sobre o seu projeto e 
                     entratrenos em contato com você.
                 </p>
             </div>
-            <form>
-                <div>
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <form class="contato__forumulario">
+                <div class="contato__campo">
+                    <label class="contato__label" for="nome">Nome</label>
+                    <input class="contato__input" type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                 </div>
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <div class="contato__campo">
+                    <label class="contato__label" for="email">E-mail</label>
+                    <input class=""contato__input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                 </div>
-                <div>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Conte sobre seu projeto" rows="5" required></textarea>
+                <div class="contato__campo">
+                    <label class="contato__label" for="mensagem">Mensagem</label>
+                    <textarea class="contato__input id="mensagem" name="mensagem" placeholder="Conte sobre seu projeto" rows="5" required></textarea>
                 </div>
-                <button type="submit">Enviar Mensagem</button>
+                <button class="conato__botao" type="submit">Enviar Mensagem</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>
+    <footer class="rodape">
+        <p class="rodape__descricao">
             &copy; 2026 Agência Criativa Web.
             Todos os direitos reservados.
         </p>

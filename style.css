@@ -10,245 +10,283 @@
     --cor-fundo: #ffffff;
     --cor-fundo-claro: #f8f7ff;
 }
+
+html{
+    font-size: 16px;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
 }
-html {
-    font-size: 16px;
+
+.cabecalho {
+    padding: 1.5rem 5%;
+    background-color: var(--cor-fundo);
 }
 
-h1 {
-    font-size: 3rem;
-}
-header {
-    padding: 1.5rem 5%;
-    background-color: #ffffff;
-}
-nav {
+.cabecalho__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo {
+
+.cabecalho__logo {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--cor-principal);
 }
 
-nav ul {
+.cabecalho__lista {
     display: flex;
     gap: 2rem;
     list-style: none;
 }
 
-nav ul a {
+.cabecalho__link {
     text-decoration: none;
-    color: #222;
+    color: var(--cor-texto);
     font-weight: 500;
 }
 
-#home {
+.hero {
     min-height: 88vh;
     padding: 5rem 5%;
     display: flex;
     align-items: center;
 }
-#home > div {
+
+.hero__conteudo {
     max-width: 700px;
 }
-#home p:first {
-    color: #6c63ff;
+
+.hero__subtitulo {
+    color: var(--cor-principal);
     font-weight: bold;
     margin-bottom: 1rem;
 }
-#home h1 {
+
+.hero__titulo {
     font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
-#home h1 span {
+
+.hero__destaque {
     color: var(--cor-principal);
 }
-#home p:not(:first-child) {
+
+.hero__descricao {
     max-width: 600px;
     margin-bottom: 2rem;
 }
-#home a {
-    display: inline-block;
-    padding: 0.9rem 1.8rem;
 
-    background-color: #6c63ff;
-    color: white;
-
-    text-decoration: none;
-    border-radius: 0.5rem;
-
-    font-weight: bold;
-}
-#home a:hover {
-    opacity: 0.85;
-}
-#sobre {
+.sobre {
     padding: 6rem 5%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
 }
-#sobre > div {
+
+.sobre__conteudo {
     flex: 1;
-}
-#sobre > div:first-child {
     max-width: 600px;
 }
-#sobre h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-#sobre p {
-    margin-bottom: 1rem;
-}
-#sobre ul {
-    list-style: none;
-    margin-top: 1.5rem;
-}
-#sobre li {
-    margin-bottom: 1rem;
-    padding: 1rem;
 
-    background-color: #f5f4ff;
-    border-radius: 0.5rem;
-}
-#sobre > div:first-child > p:first-child {
-    color: #6c63ff;
+.sobre__subtitulo {
+    color: var(--cor-principal);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
-@media (max-wiidth: 768px) {
-    #sobre {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .servicos-grid {
-        grid-template-columns: 1fr;
-    }
-    .depoimentos-grid {
-        grid-template-columns: 1fr;
-    }
-    #contato {
-        flex-direction: column;
-    }
+
+.sobre__titulo {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
-#servicos {
+
+.sobre__texto {
+    margin-bottom: 1rem;
+}
+
+.sobre__destaques {
+    flex: 1;
+}
+
+.sobre__lista {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.sobre__item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 0.5rem;
+}
+
+.sobre__imagem {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.servicos {
     padding: 6rem 5%;
-    background-color: #f8f7ff;
+    background-color: var(--cor-fundo-claro);
 }
-#servicos > div:first-child {
+
+.servicos__cabecalho {
     max-width: 700px;
     margin-bottom: 3rem;
 }
-.servicos-grid {
+
+.servicos__subtitulo {
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.servicos__titulo {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.servicos__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
-.card-servico {
+
+.servicos__card {
     padding: 2rem;
-
-    background-color: #ffffff;
+    background-color: var(--cor-fundo);
     border-radius: 1rem;
-
     border: 1px solid #e8e6f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card-servico h3 {
+
+.servicos__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.servicos__card-titulo {
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
-.card-servico p {
-    color: #666;
+
+.servicos__card-texto {
+    color: var(--cor-texto-secundario);
 }
-.card-servico {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-servico:hover {
-    transform: translate(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-@media (max-width: 1024px) {
-    .servicos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .depoimentos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-#depoimentos {
+
+.depoimentos {
     padding: 6rem 5%;
 }
-#depoimentos > div:first-child {
+
+.depoimentos__cabecalho {
     max-width: 700px;
     margin-bottom: 3rem;
 }
-#depoimentos h2 {
+
+.depoimentos__subtitulo {
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.depoimentos__titulo {
     font-size: 2.5rem;
     line-height: 1.2;
 }
-.depoimentos-grid {
+
+.depoimentos__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem
+    gap: 1.5rem;
 }
-.card-depoimento {
+
+.depoimentos__card {
     padding: 2rem;
-
-    background-color: #f8f7ff;
+    background-color: var(--cor-fundo-claro);
     border-radius: 1rem;
-
     border: 1px solid #e8e6f5;
 }
-.card-depoimento > p {
+
+.depoimentos__texto {
     margin-bottom: 1.5rem;
     font-style: italic;
 }
-.card-depoimento h3 {
+
+.depoimentos__nome {
     margin-bottom: 0.25rem;
 }
-.card-depoimento span {
+
+.depoimentos__cargo {
     color: var(--cor-principal);
     font-size: 0.9rem;
 }
-#contato {
+
+.contato {
     padding: 6rem 5%;
-    background-color: #f8f7ff;
+    background-color: var(--cor-fundo-claro);
 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 4rem;
 }
-#contato > div {
+
+.contato__conteudo {
     flex: 1;
 }
-#contato form {
+
+.contato__subtitulo {
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.contato__titulo {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.contato__descricao {
+    color: var(--cor-texto-secundario);
+}
+
+.contato__formulario {
     flex: 1;
+
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-#contato form > div {
+
+.contato__campo {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-#contato input, #contato textarea {
-    width: 100¢;
+
+.contato__label {
+    font-weight: 500;
+}
+
+.contato__input {
+    width: 100%;
     padding: 1rem;
 
     border: 1px solid #d9d7e8;
@@ -257,13 +295,15 @@ nav ul a {
     font-family: inherit;
     font-size: 1rem;
 
-    background-color: #ffffff;
+    background-color: var(--cor-fundo);
 }
-#contato input:focus, #contato textarea:focus {
-    outline: 2px solid #6c63ff;
-    border-color: #6c63ff;
+
+.contato__input:focus {
+    outline: 2px solid var(--cor-principal);
+    border-color: var(--cor-principal);
 }
-#contato button {
+
+.contato__botao {
     align-self: flex-start;
 
     padding: 0.9rem 1.8rem;
@@ -271,28 +311,41 @@ nav ul a {
     border: none;
     border-radius: 0.5rem;
 
-    background-color: #6c63ff;
-    color: #ffffff;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
 
     font-size: 1rem;
     font-weight: bold;
 
     cursor: pointer;
 }
-#contato button:hover {
+
+.contato__botao:hover {
     opacity: 0.85;
 }
-footer {
+
+.rodape {
     padding: 2rem 5%;
     text-align: center;
-
-    background-color: #222;
-    color:#ffffff;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
 }
-#sobre img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
+
+.rodape__texto {
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servicos__grid,
+    .depoimentos__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato {
+        flex-direction: column;
+    }
 }

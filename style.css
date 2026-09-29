@@ -335,6 +335,15 @@ body {
     margin: 0;
 }
 @media (max-width: 768px) {
+    .cabecalho__nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .cabecalho__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
     .sobre {
         flex-direction: column;
         align-items: flex-start;
